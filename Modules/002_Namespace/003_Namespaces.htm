@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Namespaces</title>
+    <script src="jquery-1.10.2.js"></script>
+    <script src="jquery.sample-bad.js"></script>
+    <script src="jquery.sample-good.js"></script>
+    <script>
+
+        $(function () {
+            $(this).block();
+            $(this).block('show');
+            $(this).block('hide');
+            $(this).block('update', { data: '123' });
+        });
+
+    </script>
+</head>
+<body>
+</body>
+</html>

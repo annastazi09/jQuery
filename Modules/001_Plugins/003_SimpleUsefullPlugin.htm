@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery-1.10.2.js"></script>
+    <script src="jquery.maxHeight.js"></script>
+    <script>
+
+        $(function () {
+            var m = $("div").maxHeight();
+            alert(m);
+        });
+
+    </script>
+    <style>
+        div {
+            border:1px solid black;
+            margin:20px;
+        }
+    </style>
+</head>
+<body>
+    <div style="height:30px; width:100px"></div>
+    <div style="height:60px; width:90px"></div>
+    <div style="height:80px; width:10px"></div>
+    <div style="height:10px; width:20px"></div>
+    <div style="height:30px; width:60px"></div>
+</body>
+</html>

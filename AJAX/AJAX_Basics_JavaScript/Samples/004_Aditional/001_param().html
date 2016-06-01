@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>param()</title>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+
+        $(function () {
+
+            // param() - Преобразует объект, массив или массив объектов в строку, которая соответствует формату передачи данных через url.
+
+            var obj = {
+                one: 1,
+                two: 2,
+            };
+            var urlParams = $.param(obj);
+            alert(urlParams);
+
+            var obj2 = {
+                a: {
+                    one: 1,
+                    two: 2,
+                },
+                b: [1, 2, 3]
+            };
+            var urlParam2 = $.param(obj2);
+            alert(urlParam2);
+
+            var decoded = decodeURIComponent(urlParam2);
+            alert(decoded);
+
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

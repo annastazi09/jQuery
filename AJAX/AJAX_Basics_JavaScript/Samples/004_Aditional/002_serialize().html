@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>serialize()</title>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+
+        $(function () { 
+
+        // serialize() - Возвращает строку, с именами и значениями выбранных элементов формы. Эта строка будет иметь формат параметров url-запроса.
+        var data = $('form').serialize();
+        alert(data);
+        
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" name="login" value="abc" />
+        <input type="text" name="password" value="123" />
+    </form>
+</body>
+</html>

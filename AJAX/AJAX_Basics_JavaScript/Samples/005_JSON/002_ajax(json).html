@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>ajax(json)</title>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+
+        var json;
+        // обработчик события загрузки страницы.
+        window.onload = function () {
+            // Создание объекта запроса.
+            $.ajax({
+                type: "POST",
+                url: "HandlerObject.ashx",
+                dataType: "json",
+
+                // функция получает десериализованный объект
+                success: function (obj) {
+                    $(document.body).append("<p>" + obj.Name + "</p>");
+                    $(document.body).append("<p>" + obj.Age + "</p>");
+                    $(document.body).append("<p>" + obj.Course + "</p>");
+                }
+            });
+        }
+
+    </script>
+</head>
+<body>
+</body>
+</html>

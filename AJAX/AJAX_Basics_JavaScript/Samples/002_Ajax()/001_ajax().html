@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>$.ajax</title>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+
+        window.onload = function () {
+            // Создание объекта запроса.
+            // $.ajax() возвращает объект XMLHttpRequest.
+            $.ajax({
+                type: "GET",
+                url: "test.js",
+                // определение типа ответа, который ожидается со стороны сервера
+                dataType: "script"
+            });
+        }
+    </script>
+</head>
+<body>
+    <p></p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>load()</title>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+
+        $(function () {
+
+            // .load() - загружает HTML из удаленного файла и встраивает его в объектную модель документа (DOM).
+            $("#objectID").load("test.html #content", // адрес файла и селектор для получения данных
+                function () {
+                    alert("Loaded!");
+                });
+        });
+
+    </script>
+</head>
+<body>
+    <div id="objectID"></div>
+</body>
+</html>

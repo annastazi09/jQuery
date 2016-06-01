@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+
+        var object = { testName: 'Ivan' };
+
+        function print(a, b) {
+            alert(this.testName + " " + a + " " + b);
+        }
+
+        print('a', 'b'); //- не работает
+
+        // print.apply(object, ['hello', 'world']); - производим вызов функции print() на объекте object передавая в качестве 
+        // параметра два значение 'hello', как первый аргумент и 'world' как второй
+        // при этом если в функции print используется ключевое слово this оно будет ссылаться на объект object
+        print.apply(object, ['hello', 'world']);
+
+        // print.call(obj, 'hello', 'world') метод call() используется для того, чтобы указать объект, на который будет 
+        // ссылаться ключевое слово this в вызываемой функции.
+        print.call(object, 'hello', 'world');
+
+        // отличие call от apply заключается в том, что в call можно передавать неограниченное количество аргументов, а apply() 
+        // принимает только два параметра объект и массив аргументов для функции.
+    </script>
+
+</head>
+<body>
+</body>
+</html>

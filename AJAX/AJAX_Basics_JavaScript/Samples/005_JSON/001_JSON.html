@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON</title>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+
+        // Создаем объект JavaScript
+
+        var student = {
+            name: "Ivan",
+            age: 25,
+            course: "jQuery"
+        };
+
+        // JSON.stringify() - метод для сериализации объекта в JSON
+        var data = JSON.stringify(student); // сериализация
+        alert(data); // '{ "name" : "Ivan", "age": "25", "course" : "jQuery" }'
+
+        // JSON.parse() - метод для десериализации данных из JSON в JavaScript объект
+        var obj = JSON.parse(data);
+        alert(obj.name + "\r\n" + obj.age + "\r\n" + obj.course);
+        
+    </script>
+</head>
+<body>
+</body>
+</html>

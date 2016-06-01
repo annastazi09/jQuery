@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Метод offsetParent()</title>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+
+        // Метод offsetParent() получает ближайшего предка элемента, который позиционирован (absolute, relative или fixed).
+
+        $(function () {
+            $("p")
+                .offsetParent()
+                .css("background-color", "Red");
+        });
+
+    </script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div style="position: absolute; background-color: green">
+        <div>
+            <p>Это простой параграф</p>
+        </div>
+    </div>
+    <div style="position: absolute; background-color: blue; left: 50px; top: 50px">
+        <div>
+            <span>Это простой span</span>
+        </div>
+    </div>
+</body>
+</html>
